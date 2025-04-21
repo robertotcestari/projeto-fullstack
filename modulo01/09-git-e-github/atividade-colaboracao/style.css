@@ -1,0 +1,108 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(70, 252, 226, 1) 100%
+  );
+  color: white;
+  text-align: center;
+  padding: 1.5em 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+main {
+  padding: 25px;
+  width: 100%;
+  margin: 20px auto;
+  flex: 1;
+  display: flex;
+}
+
+#classbook-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: flex-start;
+}
+
+.student-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  width: 220px; /* Largura fixa para os cards */
+  height: 260px;
+}
+
+.student-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.student-card img {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  object-fit: cover; /* Crop image nicely within the circle */
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #e9ecef;
+  background-color: #f8f9fa; /* Placeholder background */
+  display: block; /* Center image properly */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.student-card h2 {
+  font-size: 1.3em;
+  margin: 15px 0 5px;
+  color: #0d6efd; /* Bootstrap primary blue */
+  font-weight: 500;
+}
+
+footer {
+  background-color: #343a40;
+  color: #adb5bd;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* Basic responsive adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  #classbook-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+  }
+  .student-card img {
+    width: 120px;
+    height: 120px;
+  }
+  main {
+    padding: 15px;
+  }
+}
