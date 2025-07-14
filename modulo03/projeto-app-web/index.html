@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chat App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="https://fav.farm/🤖" />
+    <!-- add script -->
+    <script src="js/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <h1>Assistente de IA 🤖</h1>
+        <div class="provider-selector">
+          <label for="aiProvider">Provider:</label>
+          <select id="aiProvider">
+            <option value="openai">OpenAI</option>
+          </select>
+        </div>
+        <div class="model-selector">
+          <label for="modelSelect">Modelo:</label>
+          <select id="modelSelect">
+            <option value="gpt-4.1-nano">GPT-4.1 Nano</option>
+          </select>
+        </div>
+        <div class="apikey-input">
+          <label for="apiKeyInput">OpenAI API Key:</label>
+          <input
+            type="password"
+            id="apiKeyInput"
+            placeholder="OpenAI API Key"
+            autocomplete="off"
+          />
+        </div>
+      </header>
+
+      <!-- Main Chat Area -->
+      <main class="chat-container">
+        <section
+          class="messages"
+          id="messages"
+          role="log"
+          aria-live="polite"
+          aria-label="Chat messages"
+        >
+          <!-- Welcome message -->
+          <div class="message ai">
+            <div class="message-bubble">
+              <p>Olá! Sou seu assistente de IA. Como posso ajudá-lo hoje?</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Input Area -->
+        <form class="input-container" id="chatForm">
+          <div class="input-wrapper">
+            <textarea
+              id="messageInput"
+              placeholder="Digite sua mensagem..."
+              rows="1"
+              aria-label="Digite sua mensagem"
+              required
+            ></textarea>
+            <button type="submit" id="sendButton" aria-label="Enviar mensagem">
+              <span class="send-icon">→</span>
+            </button>
+          </div>
+        </form>
+      </main>
+
+
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
+      <div class="loading-spinner"></div>
+      <p>Enviando mensagem...</p>
+    </div>
+  </body>
+</html>
