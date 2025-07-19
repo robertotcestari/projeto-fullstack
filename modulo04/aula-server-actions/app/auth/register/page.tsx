@@ -1,5 +1,5 @@
 import { registerAction } from '../actions';
-import RegisterForm from '@/components/RegisterForm';
+import RegisterForm from '../../../components/RegisterForm';
 
 export default function RegisterPage() {
   return (

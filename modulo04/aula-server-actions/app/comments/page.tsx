@@ -1,5 +1,5 @@
 import { addCommentAction } from './actions';
-import CommentForm from '@/components/CommentForm';
+import CommentForm from '../../components/CommentForm';
 
 // Simulated comments data
 const initialComments = [
